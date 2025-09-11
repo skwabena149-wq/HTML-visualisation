@@ -64,10 +64,11 @@ ST (blue) seems to dominate in numbers across most months, especially in later s
 <p><li>ST: Has more cattle represented in the dataset (denser clusters of points). This suggests higher availability and production, making it more important economically.</li></p>
 <p><li>STX: Has fewer numbers, However, their weights are comparable to ST, meaning they still produce competitive carcass and live weights. </li></p>
     <div id="average_weight" class="chart"></div>
-   <p><h3>Deducing Yield From Average Weight</h3></p>
+   <p><h3>Carcass Yield</h3></p>
    <p>Carcass yield is the percentage of an animal’s live weight that becomes usable meat (carcass) after slaughter. It helps assess how efficiently a breed converts body mass into marketable meat. Now, to calculate for carcass yield, the formula is;</p>
    <p>Yield (%) = (Carcass Weight / Final Live Weight) × 100 <br>ST = (300 / 600) × 100% <br>ST = 0.5 × 100% <br>ST = 50%. therfore, carcass yiled percentage for ST breed is 50%</p>
    <p>STX = (200 / 400) × 100% <br>STX = 0.5 × 100% <br>STX = 50% </p>
+   
    <p><h3>Interpretation</h3></p>
    <p><h3>ST Breed</h3><br><li>Higher overall weight and higher carcass output.</li></p>
    <p><li>Ideal for maximum meat production.</li></p>
@@ -76,9 +77,28 @@ ST (blue) seems to dominate in numbers across most months, especially in later s
    <p><li>Lower weight, but same efficiency.</li></p>
    <p><li>May be more feed-efficient if raised under limited resources.</li></p>
    <p><li>Suitable for small scale farming or in situations where feed cost is a concern.</li></p>
-   <p>Now which breed is better for production?<br>The choice of the better breed depends on the specific goals a farmer wants to achieve.</p>
+   
+   <div id ="price_chart" class="chart"></div>
+   <div id ="average_price" class="chart"></div>
+   <p>average price(£)= average carcass weight(kg) × average price(p/kg) <br>ST = 300 × 399<br>ST = £1,197.00 </p>
+   <p>STX = 200 × 393<br>STX = £786.00</p>
+   <p><h3>Interpretation</h3></p>
+   <p><h3>ST Breed</h3></p>
+   <p><li>ST breed shows a wider range of carcass prices, with values ranging from approximately 356 to 420 pence/kg</li></p>
+   <p><li>Several outliers are present, indicating potential for high value carcasse.
+</li></p>
+<p><li>ST breed has the highest and lowest price which shows st breeds could be of hiher rewards if managed propely and also has a higher risk if not managedpropely</li></p>
+<p><h3>STX Breed</h3></p>
+<p><li>STX breed prices are more consistent, ranging between between 382 and 403 pence/kg.
+</li></p>
+<p><li>stable performance and predictable returns.
+</li></p>
+<p><li>Ideal for farmers seeking reliability and lower risk.
+</li></p>
+<p>Now which breed is better for production?<br>The choice of the better breed depends on the specific goals a farmer wants to achieve.</p>
    <p><li>If your goal is maximum meat yield and you can afford the feed: ST is the best choice.</li></p>
    <p><li>If your goal is cost-efficiency or resource conservation: STX may be more practical.</li></p>
+
 
 
 
@@ -1616,7 +1636,546 @@ const average_weight = {
       }
     }
   ]
+};
+
+const price = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Scatter plot of Dead Wt Pence/kg for ST and STX breeds",
+  "data": {
+    "values": [
+      {
+        "Official tag": "UK 362735 102195",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 397.0
+      },
+      {
+        "Official tag": "UK 362735 702194",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 502192",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 386.0
+      },
+      {
+        "Official tag": "UK 362735 202189",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 399.0
+      },
+      {
+        "Official tag": "UK 362735 302190",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 102188",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 412.0
+      },
+      {
+        "Official tag": "UK 362735 702187",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 403.0
+      },
+      {
+        "Official tag": "UK 362735 602186",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 400.0
+      },
+      {
+        "Official tag": "UK 362735 102181",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 397.0
+      },
+      {
+        "Official tag": "UK 362735 202182",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 402184",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 412.0
+      },
+      {
+        "Official tag": "UK 362735 502178",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 406.0
+      },
+      {
+        "Official tag": "UK 362735 602179",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 412.0
+      },
+      {
+        "Official tag": "UK 362735 402177",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 402.0
+      },
+      {
+        "Official tag": "UK 362735 202175",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 302176",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 406.0
+      },
+      {
+        "Official tag": "UK 362735 102174",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 412.0
+      },
+      {
+        "Official tag": "UK 362735 502185",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 402170",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 397.0
+      },
+      {
+        "Official tag": "UK 362735 502171",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 387.0
+      },
+      {
+        "Official tag": "UK 362735 702173",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 381.0
+      },
+      {
+        "Official tag": "UK 362735 302169",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 412.0
+      },
+      {
+        "Official tag": "UK 362735 602165",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 410.0
+      },
+      {
+        "Official tag": "UK 362735 702166",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 356.0
+      },
+      {
+        "Official tag": "UK 362735 102160",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 403.0
+      },
+      {
+        "Official tag": "UK 362735 302162",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 702159",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 406.0
+      },
+      {
+        "Official tag": "UK 362735 502157",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 393.0
+      },
+      {
+        "Official tag": "UK 362735 602158",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 420.0
+      },
+      {
+        "Official tag": "UK 362735 302155",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 400.0
+      },
+      {
+        "Official tag": "UK 362735 102153",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 382.0
+      },
+      {
+        "Official tag": "UK 362735 202154",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 502150",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 602151",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 302148",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 403.0
+      },
+      {
+        "Official tag": "UK 362735 402149",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 397.0
+      },
+      {
+        "Official tag": "UK 362735 202147",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 400.0
+      },
+      {
+        "Official tag": "UK 362735 702145",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 386.0
+      },
+      {
+        "Official tag": "UK 362735 102139",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 202140",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 408.0
+      },
+      {
+        "Official tag": "UK 362735 302141",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 403.0
+      },
+      {
+        "Official tag": "UK 362735 602144",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 410.0
+      },
+      {
+        "Official tag": "UK 362735 602137",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 402135",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 403.0
+      },
+      {
+        "Official tag": "UK 362735 502136",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 382.0
+      },
+      {
+        "Official tag": "UK 362735 202133",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 395.0
+      },
+      {
+        "Official tag": "UK 362735 302127",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 414.0
+      },
+      {
+        "Official tag": "UK 362735 302134",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 406.0
+      },
+      {
+        "Official tag": "UK 362735 502129",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 406.0
+      },
+      {
+        "Official tag": "UK 362735 602130",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 406.0
+      },
+      {
+        "Official tag": "UK 362735 702131",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 102125",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 202126",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 403.0
+      },
+      {
+        "Official tag": "UK 362735 602123",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 400.0
+      },
+      {
+        "Official tag": "UK 362735 102118",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 412.0
+      },
+      {
+        "Official tag": "UK 362735 302120",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 602116",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 400.0
+      },
+      {
+        "Official tag": "UK 362735 702117",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 376.0
+      },
+      {
+        "Official tag": "UK 362735 202112",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 412.0
+      },
+      {
+        "Official tag": "UK 362735 302113",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 502108",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 406.0
+      },
+      {
+        "Official tag": "UK 362735 402107",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 402100",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 202098",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 403.0
+      },
+      {
+        "Official tag": "UK 362735 302099",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 382.0
+      },
+      {
+        "Official tag": "UK 362735 502094",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 390.0
+      },
+      {
+        "Official tag": "UK 362735 602095",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 702096",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 400.0
+      },
+      {
+        "Official tag": "UK 362735 102097",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 397.0
+      },
+      {
+        "Official tag": "UK 362735 302092",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 394.0
+      },
+      {
+        "Official tag": "UK 362735 402093",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 403.0
+      },
+      {
+        "Official tag": "UK 362735 702089",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 399.0
+      },
+      {
+        "Official tag": "UK 362735 402086",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 406.0
+      },
+      {
+        "Official tag": "UK 362735 602088",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 393.0
+      },
+      {
+        "Official tag": "UK 362735 102083",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 202084",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 401.0
+      },
+      {
+        "Official tag": "UK 362735 202077",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 302078",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 403.0
+      },
+      {
+        "Official tag": "UK 362735 402079",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 602081",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 390.0
+      },
+      {
+        "Official tag": "UK 362735 702075",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 387.0
+      },
+      {
+        "Official tag": "UK 362735 502073",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 395.0
+      },
+      {
+        "Official tag": "UK 362735 602074",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 406.0
+      },
+      {
+        "Official tag": "UK 362735 402072",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 302071",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 396.0
+      },
+      {
+        "Official tag": "UK 362735 202070",
+        "Breed": "STX",
+        "Dead Wt Pence/kg": 391.0
+      },
+      {
+        "Official tag": "UK 362735 702068",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 395.0
+      },
+      {
+        "Official tag": "UK 362735 602067",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 397.0
+      },
+      {
+        "Official tag": "UK 362735 302064",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 393.0
+      },
+      {
+        "Official tag": "UK 362735 602060",
+        "Breed": "ST",
+        "Dead Wt Pence/kg": 400.0
+      }
+    ]
+  },
+  "mark": {"type": "point", "size": 50, "opacity": 1, "filled": true},
+  "encoding": {
+    "x": {
+      "field": "Official tag",
+      "type": "nominal",
+      "title": "Official Tag"
+    },
+    "y": {
+      "field": "Dead Wt Pence/kg",
+      "type": "quantitative",
+      "title": "Dead Wt Pence/kg"
+    },
+    "color": {
+      "field": "Breed",
+      "type": "nominal",
+      "title": "Breed"
+    },
+    "tooltip": [
+      {
+        "field": "Official tag",
+        "type": "nominal",
+        "title": "Official tag"
+      },
+      {
+        "field": "Breed",
+        "type": "nominal",
+        "title": "Breed"
+      },
+      {
+        "field": "Dead Wt Pence/kg",
+        "type": "quantitative",
+        "title": "Dead Wt Pence/kg",
+        "format": ".1f"
+      }
+    ]
+  },
+  "width": 700,
+  "height": 200,
+  "title": "Carcass Price (pence/kg) for ST and STX Breeds"
+};
+
+const average_price = {
+  
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 200}},
+  "data": {"name": "data-94ca4b939e3117ae08e40d86f57902ec"},
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {"field": "Breed", "type": "nominal"},
+    "y": {"field": "Count", "type": "quantitative"},
+    "color": {"field": "Breed", "type": "nominal"},
+    "column": {"field": "Type", "type": "nominal"},
+    "tooltip": [
+      {"field": "Breed", "type": "nominal"},
+      {"field": "Average Deadweight Price (p/kg)", "type": "quantitative"},
+  
+    ],
+    "x": {"field": "Breed", "title": "Breed", "type": "nominal"},
+    "y": {
+      "field": "Average Deadweight Price (p/kg)",
+      "title": "Average Deadweight Price (p/kg)",
+      "type": "quantitative"
+    }
+  },
+  "params": [
+    {
+      "name": "param_1",
+      "select": {"type": "interval", "encodings": ["x", "y"]},
+      "bind": "scales"
+    }
+  ],
+  "title": "Average Deadweight Price per kg",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+  "datasets": {
+    "data-94ca4b939e3117ae08e40d86f57902ec": [
+      {"Breed": "ST", "Average Deadweight Price (p/kg)": 399},
+      {"Breed": "STX", "Average Deadweight Price (p/kg)": 393}
+    ]
+  }
+
 }
+
   
 
 
@@ -1629,7 +2188,9 @@ const average_weight = {
     vegaEmbed('#grazing_chart', grazing);
     vegaEmbed('#sales_chart',cattlesales);
     vegaEmbed('#weightgain',weightgain);
-    vegaEmbed('#average_weight',average_weight)
+    vegaEmbed('#average_weight',average_weight);
+    vegaEmbed('#price_chart',price);
+    vegaEmbed('#average_price',average_price)
   </script>
 
 </body>
